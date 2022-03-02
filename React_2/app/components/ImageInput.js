@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   View,
   StyleSheet,
@@ -11,6 +11,14 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import * as ImagePicker from "expo-image-picker";
 
 function ImageInput({ imageUri, onChangeImage }) {
+  const requestPermission = async () => {
+    const result = await ImagePicker.requestMediaLibraryPermissionsAsync();
+    if (!result.granted) alert("you need permission");
+  };
+  useEffect(() => {
+    requestPermission();
+  }, []);
+
   const handlePress = () => {
     if (!imageUri) selectImage();
     else
