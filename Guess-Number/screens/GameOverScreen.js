@@ -7,7 +7,10 @@ function GameOverScreen(props) {
       <Text>Game Over</Text>
       <View style={styles.imageContainer}>
         <Image
-          source={require("../assets/success.png")}
+          //   source={require("../assets/success.png")}
+          source={{
+            uri: "https://ane4bf-datap1.s3-eu-west-1.amazonaws.com/wmocms/s3fs-public/styles/featured_media_detail/public/news/featured_media/48835889383_c5959fd02c_o.jpg?X1tupMMwIIblrefeeWgXSO43YI0TsDZ9&itok=x5usRWQ9",
+          }}
           style={styles.image}
           resizeMode="contain"
         />
