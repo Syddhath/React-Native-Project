@@ -1,0 +1,7 @@
+ <Pressable
+              onPress={() => {
+                alert("This is for test!");
+              }}
+            >
+              <AntDesign name="questioncircle" size={16} color="#246EE9" />
+            </Pressable>
